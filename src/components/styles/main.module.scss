@@ -1,0 +1,106 @@
+@import '@fontsource/poppins'; // Importa la fuente Poppins
+@import './animation.module.scss'; // Importa las animaciones
+
+.menu {
+  display: flex !important;
+  justify-content: flex-end; /* Alinear los elementos a la derecha */
+  align-items: center;
+  height: fit-content;
+  padding: 2%;
+  background-color: black;
+    
+    a {
+      cursor: pointer;
+      color: white;
+      font-weight: bold;
+      margin-left: 10px; 
+      text-decoration: none;
+    }
+    @media (max-width: 320px){
+      .menuButton {
+        display: block;
+      }
+      a{
+        visibility: hidden;
+      }
+    }
+    @media (min-width:320px){
+    .menuButton {
+      display: block;
+    }
+    a{
+      visibility: hidden;
+    }
+    }
+    @media (min-width:720px){
+      .menuButton {
+        display: block;
+        
+      }
+      a{
+        visibility: hidden;
+        font-size: large;
+      }
+      }
+
+      @media (min-width:1234px){
+        .menuButton {
+          display: none;
+          
+        }
+        a{
+          visibility: visible;
+          font-size: 20px;
+        }
+        }
+
+        @media (min-width:1948px){
+          .menuButton {
+            display: none;
+            
+          }
+          a{
+            font-size: 25px;
+          }
+          }
+}
+
+.menuHamburgerItem{
+  display: none;
+    text-align: center;
+    min-width: 200px;
+    background: #c8c8c8;
+    position: absolute; 
+    left: 0;
+    right: 0;
+    overflow: visible; 
+    .items{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+  
+    }
+}
+
+.animated-text {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.animated-text:hover {
+  animation: typing 3s steps(40) infinite; // Ajusta la duración y el número de pasos según sea necesario
+}
+
+
+
+/* Agrega tus estilos a continuación */
+body {
+  font-family: 'Poppins', sans-serif;
+  /* Otros estilos */
+}
+
+.hidden{
+  display: none;
+}
