@@ -52,7 +52,7 @@ const Header = () => {
       <nav className={styles.menu}>
         {/* Menú de navegación */}
         <div className={styles.menuItems}>
-          <a onClick={() => scrollToSection('home')}>Inicio</a>
+          <a onClick={() => scrollToSection('home')}>Inicio.</a>
           <a onClick={() => scrollToSection('projects')}>Proyectos</a>
           <a onClick={() => scrollToSection('skills')}>Habilidades</a>
           <a onClick={() => scrollToSection('experience')}>Experiencia</a>
