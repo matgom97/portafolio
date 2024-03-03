@@ -1,7 +1,6 @@
 // src/components/home/ProjectList.js
 
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const ProjectList = () => {
   return (

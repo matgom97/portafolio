@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import styles from '../styles/main.module.scss';
 
 const Presentation = () => {
   
