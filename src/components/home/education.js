@@ -8,7 +8,6 @@ const Education = () => {
     <section id="education">
       <h2>Educación</h2>
       {/* Detalles sobre tu educación */}
-      <Link to="/education/details  ">Ver Más Detalles</Link>
     </section>
   );
 };

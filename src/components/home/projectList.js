@@ -8,7 +8,6 @@ const ProjectList = () => {
     <section>
       <h2>Proyectos Destacados</h2>
       {/* Aquí puedes listar tus proyectos */}
-      <Link to="/projects">Ver Todos los Proyectos</Link>
     </section>
   );
 };
