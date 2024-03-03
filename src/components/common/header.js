@@ -27,7 +27,7 @@ const Header = () => {
 
   const otraFuncion = () => {
     // Acceso al valor de menuOpen
-    var x = document.querySelector(".main_menuHamburgerItem__J6rme");
+    var x = document.querySelector("#hamburger_menu");
     // Otra lógica basada en el valor de menuOpen
     if (menuOpen) {
       x.style.display = "block";
@@ -77,7 +77,7 @@ const Header = () => {
       <div>
       
       
-        <div className={` ${windowWidth > 1236 ? styles.hidden : styles.menuHamburgerItem}`}>
+        <div className={` ${windowWidth > 1236 ? styles.hidden : styles.menuHamburgerItem}`} id='hamburger_menu'>
           <div className={` ${windowWidth > 1236 ? styles.hidden : styles.items}`}>
             <a onClick={() => scrollToSection('home')}>Inicio</a>
             <a onClick={() => scrollToSection('projects')}>Proyectos</a>
