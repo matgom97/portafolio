@@ -3,7 +3,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomeContainer from './pages/HomeContainer';
-import EducationDetails from './components/home/details/educationDetails';
 import './components/styles/main.module.scss';
 
 const App = () => {
@@ -13,7 +12,7 @@ const App = () => {
         {/* Otras partes de tu aplicación, como la barra de navegación, podrían ir aquí */}
         <Routes>
           <Route path="/" element={<HomeContainer />} />
-         <Route path="/education/details" element={<EducationDetails />} />
+         
           {/* Agrega más rutas según sea necesario */}
         </Routes>
       </div>
