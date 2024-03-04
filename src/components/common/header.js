@@ -5,7 +5,7 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setMenuOpen(true);
+    setMenuOpen(!menuOpen);
   };
 
   const scrollToSection = (sectionId) => {
@@ -21,7 +21,7 @@ const Header = () => {
       <nav className={styles.menu}>
         {/* Menú de navegación */}
         <div className={styles.menuItems}>
-          <a onClick={() => scrollToSection('init')}>Inicio.</a>
+          <a onClick={() => scrollToSection('init')}>Inicio</a>
           <a onClick={() => scrollToSection('skills')}>Habilidades</a>
           <a onClick={() => scrollToSection('experience')}>Experiencia</a>
           <a onClick={() => scrollToSection('education')}>Educación</a>
@@ -41,8 +41,8 @@ const Header = () => {
       {/* Menú desplegable */}
       <div className={`${styles.menuOverlay} ${menuOpen ? styles.menuOpen : ''}`}>
         <div className={styles.menuContent}>
+        <a onClick={toggleMenu}   >Cerrar</a>
           <a onClick={() => scrollToSection('init')}>Inicio</a>
-          <a onClick={() => scrollToSection('projects')}>Proyectos</a>
           <a onClick={() => scrollToSection('skills')}>Habilidades</a>
           <a onClick={() => scrollToSection('experience')}>Experiencia</a>
           <a onClick={() => scrollToSection('education')}>Educación</a>
