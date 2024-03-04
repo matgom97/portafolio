@@ -1,6 +1,42 @@
 @import '@fontsource/poppins'; // Importa la fuente Poppins
 @import './animation.module.scss'; // Importa las animaciones
 
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: top 0.3s ease-in-out; /* Añade una transición suave para el cambio de posición */
+}
+
+.show {
+  top: 0; /* Muestra la barra de navegación en la parte superior de la ventana */
+}
+
+.hide {
+  top: -100px; /* Oculta la barra de navegación arriba de la ventana */
+}
+
+.initial {
+  width: 100vw;
+  /* Ancho del viewport */
+  height: 100vh;
+  /* Alto del viewport */
+  background-color: green;
+  margin-top: 90px;
+}
+
+.fullscreen {
+  width: 100vw;
+  /* Ancho del viewport */
+  height: 100vh;
+  /* Alto del viewport */
+  background-color: red;
+  margin-top: 90px;
+}
+
+
 .menu {
   display: flex !important;
   justify-content: flex-end;
@@ -18,12 +54,12 @@
     text-decoration: none;
   }
 
-  a:hover{
-    color:red;
+  a:hover {
+    color: red;
     border-bottom: 1px solid red;
   }
 
- 
+
 
   @media (max-width: 320px) {
     .menuButton {
@@ -149,12 +185,12 @@ body {
   font-weight: bolder;
   font-size: x-large;
 
-  a{
+  a {
     padding: 10px;
   }
 
-  a:hover{
-    color:red;
+  a:hover {
+    color: red;
     border-bottom: 1px solid red;
   }
 }

@@ -1,10 +1,12 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import styles from '../styles/main.module.scss';
 
 const SkillList = () => {
   return (
-    <section id="skills">
+    
+    <section className={styles.fullscreen} id="skills">
       <h2>Habilidades Técnicas</h2>
       <ul>
         <li>JavaScript</li>
@@ -14,6 +16,7 @@ const SkillList = () => {
       </ul>
       <Link to="/skills">Ver Todas las Habilidades</Link>
     </section>
+    
   );
 };
 

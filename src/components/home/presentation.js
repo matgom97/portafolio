@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
+
+import styles from '../styles/main.module.scss';
 
 const Presentation = () => {
   
 
   return (
-    <div id='init'>
+    <div className={styles.initial} id='init'>
         <div>
             <h1>
                 Hola! soy Mateo Gomez Osio.
-                ingeniero de sistemas y programador
+                Ingeniero de sistemas y programador
             </h1>
         </div>
         <div>
