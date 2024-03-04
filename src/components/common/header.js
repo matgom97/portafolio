@@ -1,42 +1,11 @@
-import React, { useState, useEffect } from 'react';
-
+import React, { useState } from 'react';
 import styles from '../styles/main.module.scss';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
- console.log(windowWidth)
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-      //otraFuncion();
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-    otraFuncion()
-  };
-
-  const otraFuncion = () => {
-    // Acceso al valor de menuOpen
-    var x = document.querySelector("#hamburger_menu");
-    // Otra lógica basada en el valor de menuOpen
-    if (menuOpen) {
-      x.style.display = "block";
-    } else {
-      x.style.display = "none";
-    }
-    if (windowWidth > 1236){
-      x.style.display = "none";
-    }
+    setMenuOpen(true);
   };
 
   const scrollToSection = (sectionId) => {
@@ -52,21 +21,15 @@ const Header = () => {
       <nav className={styles.menu}>
         {/* Menú de navegación */}
         <div className={styles.menuItems}>
-          <a onClick={() => scrollToSection('home')}>Inicio.</a>
-          <a onClick={() => scrollToSection('projects')}>Proyectos</a>
+          <a onClick={() => scrollToSection('init')}>Inicio.</a>
           <a onClick={() => scrollToSection('skills')}>Habilidades</a>
           <a onClick={() => scrollToSection('experience')}>Experiencia</a>
           <a onClick={() => scrollToSection('education')}>Educación</a>
         </div>
         <div>
-          <button className={styles.menuButton} onClick={toggleMenu}>
+          <button onClick={toggleMenu}  className={styles.menuButton} >
             {/* Icono de hamburguesa */}
-            <svg
-              viewBox="0 0 100 80"
-              width="40"
-              height="40"
-              fill="white"
-            >
+            <svg viewBox="0 0 100 80" width="40" height="40" fill="white">
               <rect width="100" height="20"></rect>
               <rect y="30" width="100" height="20"></rect>
               <rect y="60" width="100" height="20"></rect>
@@ -74,17 +37,15 @@ const Header = () => {
           </button>
         </div>
       </nav>
-      <div>
-      
-      
-        <div className={` ${windowWidth > 1236 ? styles.hidden : styles.menuHamburgerItem}`} id='hamburger_menu'>
-          <div className={` ${windowWidth > 1236 ? styles.hidden : styles.items}`}>
-            <a onClick={() => scrollToSection('home')}>Inicio</a>
-            <a onClick={() => scrollToSection('projects')}>Proyectos</a>
-            <a onClick={() => scrollToSection('skills')}>Habilidades</a>
-            <a onClick={() => scrollToSection('experience')}>Experiencia</a>
-            <a onClick={() => scrollToSection('education')}>Educación</a>
-          </div>
+
+      {/* Menú desplegable */}
+      <div className={`${styles.menuOverlay} ${menuOpen ? styles.menuOpen : ''}`}>
+        <div className={styles.menuContent}>
+          <a onClick={() => scrollToSection('init')}>Inicio</a>
+          <a onClick={() => scrollToSection('projects')}>Proyectos</a>
+          <a onClick={() => scrollToSection('skills')}>Habilidades</a>
+          <a onClick={() => scrollToSection('experience')}>Experiencia</a>
+          <a onClick={() => scrollToSection('education')}>Educación</a>
         </div>
       </div>
     </header>

@@ -101,6 +101,38 @@ body {
   /* Otros estilos */
 }
 
+.menuOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(7, 7, 7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0; // Inicialmente, el menú está oculto
+  pointer-events: none; // Oculta los clics en el menú
+}
+
+.menuOpen {
+  opacity: 1; // Muestra el menú con opacidad completa
+  pointer-events: auto; // Habilita los clics en el menú
+}
+
+.menuContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: white;
+}
 .hidden{
   display: none;
+}
+.nothidden{
+  display: block;
 }

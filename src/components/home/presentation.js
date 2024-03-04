@@ -4,7 +4,7 @@ const Presentation = () => {
   
 
   return (
-    <div>
+    <div id='init'>
         <div>
             <h1>
                 Hola! soy Mateo Gomez Osio.
