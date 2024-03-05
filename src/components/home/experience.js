@@ -1,10 +1,12 @@
 // src/components/home/Experience.js
 
 import React from 'react';
+import styles from '../styles/main.module.scss';
+
 
 const Experience = () => {
   return (
-    <section id="experience">
+    <section className={styles.fullscreen}   id="experience">
       <h2>Experiencia Laboral</h2>
       {/* Detalles sobre tu experiencia laboral */}
     </section>
