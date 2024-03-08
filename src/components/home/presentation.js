@@ -18,14 +18,7 @@ const Presentation = () => {
               <span className={styles.terminal_command}>ls</span>
             </div>
             <div className={styles.terminal_output}>
-              <p>Desktop</p>
-              <p>Documents</p>
-              <p>Downloads</p>
-              <p>Music</p>
-              <p>Pictures</p>
-              <p>Public</p>
-              <p>Templates</p>
-              <p>Videos</p>
+              <p>hola soy Mateo Gomez Osio, Ingeniero de sistemas y programador</p>
             </div>
           </div>
         </div>
