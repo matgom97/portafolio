@@ -23,8 +23,9 @@
   /* Ancho del viewport */
   height: 100vh;
   /* Alto del viewport */
-  background-color: green;
+  background-color: rgb(0, 0, 0);
   margin-top: 90px;
+  position: relative;
 }
 
 .fullscreen {
@@ -205,4 +206,91 @@ body {
 
 .nothidden {
   display: block;
+}
+
+// codigo para div inital 
+
+.programming_environment {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 10px;
+  height: 80%;
+  width: 100%;
+  position: absolute;
+    top: 0;
+    left: 16.2%;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+.terminal {
+  height: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.terminal_header {
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.terminal_title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.terminal_path {
+  color: #777;
+}
+
+.terminal_content {
+  background-color: #111;
+  color: #ddd;
+  padding: 10px;
+  line-height: 1.4;
+  font-family: monospace;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.terminal_input,
+.terminal_output {
+  padding: 5px;
+}
+
+.terminal_input {
+  background-color: #000;
+}
+
+.terminal_prompt {
+  color: #00ff00;
+}
+
+.terminal_command {
+  color: #ddd;
+}
+
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
