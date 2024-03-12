@@ -14,7 +14,7 @@ const Presentation = () => {
       setText(prevText => {
         if (index1 < originalText1.length) {
           index1++;
-          return originalText1.substring(0, index1) + (index1 < originalText1.length ? '' : '\n') + originalText2.substring(0, index2);
+          return originalText1.substring(0, index1) + (index1 <= originalText1.length ? '' : '\n') + originalText2.substring(0, index2);
         } else if (index2 < originalText2.length) {
           index2++;
           return originalText1 + '\n' + originalText2.substring(0, index2);
@@ -32,10 +32,6 @@ const Presentation = () => {
     <div className={`${styles.initial}`} id='init'>
       <div>
         <h1>{text}</h1>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
         <span></span>
         <span></span>
         <span></span>

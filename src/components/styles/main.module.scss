@@ -239,10 +239,11 @@
     white-space: pre-wrap;
     overflow: hidden;
     max-width: 90vw;
-    font-size: min(4vw, 24px);
+    font-size: xxx-large;
     // animation: typing 6s steps(63);
     position: relative;
     display: inline-block;
+    z-index: 1;
   }
 
   @keyframes blink {
